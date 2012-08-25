@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title></title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+      <meta charset="utf-8">
+      <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+      <link rel="stylesheet" href="application.css" />
+      <script src="jquery.js"></script> 
+      <script type="text/javascript" charset="utf-8" src="application.js"></script>  
+      <script type="text/javascript" charset="utf-8" src="sha1.js"></script>
+  </head>
+  <body onload="onBodyLoad()">
+		<div id="main_content">
+		</div>
+		<div id="id_dialog">
+			<div class="line_item">
+				This Zero Box does not have a device Id set. Please enter an Id below...
+			</div>
+			<div class="line_item">
+				<input type="text" id="device_id">
+			</div>
+			<div class="line_item">
+				<input type="button" id ="save_button" value="Save Id">
+			</div>
+		</div>
+		<div id="loading_screen">
+			<div class="title">
+				Flyer Zero
+			</div>
+			<div>
+				<img src="robot_horns.png" />
+			</div>
+			<div>
+				Stand Back! We're loading some flyers...
+			</div>
+		</div>
+  </body>
+</html>

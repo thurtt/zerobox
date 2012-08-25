@@ -1,0 +1,44 @@
+body{
+    height:100%;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    background-color:#000000;
+}
+
+#id_dialog {
+	display: none;
+	color: #efefef;
+	background: #444444;
+	border: 2px solid white;
+	font-size: 1.3em;
+	width: 400px;
+	height: 300px;
+	margin-left: -200px;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	position: absolute;
+	padding-top: 30px;
+	border-radius: 15px;
+}
+.title {
+	font: bold 2.8em Verdana, Geneva, sans-serif;
+	color: #f9e101;
+	
+}
+#loading_screen {
+	display: none;
+	color: #efefef;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 50px;
+	font-size: 2em;
+}
+
+.line_item {
+	margin: 30px;
+}
