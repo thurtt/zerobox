@@ -1,4 +1,5 @@
 var urlServer = 'http://www.flyerzero.com';
+//var urlServer = 'http://192.168.1.107:3000';
  
 function preventBehavior(e) 
  { 
@@ -11,6 +12,9 @@ function onBodyLoad() {
 }
 
 function onDeviceReady() {  
+	$('#main_content').load(function(){
+			$('#loading_screen').fadeOut('slow', function(){$('#main_content').fadeIn('slow');});
+	});
 	$('#save_button').click(generateUUID);
 	var uuid = window.localStorage.getItem('uuid');
 	if (!uuid) {
@@ -23,17 +27,7 @@ function onDeviceReady() {
 function bootstrap(uuid) {
 	var urlPath = '/zerobox/box?hash=' + uuid + '&size=medium';
 	$('#loading_screen').fadeIn('slow');
-	$.ajax(urlServer + urlPath)
-    	.done(function(data) { $('#loading_screen').fadeOut('slow', function(){
-				$('#main_content').html(data);
-			});
-    	})
-    	.fail(function() { 
-    		// we want to fail silently in the kiosk environment
-    		// just keep trying until we get some network goin on.
-    		setTimeout(function(){
-    			bootstrap(uuid);
-    		}, 2000)});
+	$('#main_content').attr('src', urlServer + urlPath);
 }
 
 function generateUUID() {

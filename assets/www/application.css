@@ -23,6 +23,14 @@ body{
 	padding-top: 30px;
 	border-radius: 15px;
 }
+#main_content{
+	display: none;
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	top: 0px;
+	
+}
 .title {
 	font: bold 2.8em Verdana, Geneva, sans-serif;
 	color: #f9e101;
@@ -37,6 +45,7 @@ body{
 	text-align: center;
 	padding-top: 50px;
 	font-size: 2em;
+	top: 0px;
 }
 
 .line_item {
